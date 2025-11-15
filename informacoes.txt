@@ -1,0 +1,30 @@
+==================================================
+GLOBAL SOLUTION 2025/2 - ARTIFICIAL INTELLIGENCE
+==================================================
+
+PROJETO: Flow - Otimizador de Layout Industrial
+
+MEMBROS DO GRUPO:
+- Gabriel Bebé Silva, RM562012
+- Pedro Ferreira Gomes, RM565824
+
+EXPLICAÇÕES ADICIONAIS:
+
+Este diretório contém a solução para a disciplina de IA:
+
+1.  dataset_layouts.csv:
+    Arquivo com os dados simulados usados para o treinamento dos modelos.
+
+2.  flow_ia_notebook.ipynb:
+    Notebook Jupyter contendo todo o pipeline de Machine Learning, incluindo:
+    - Análise exploratória (simples).
+    - Treinamento do Modelo 1 (Regressão Linear) para prever o 'tempo_total_previsto'.
+    - Treinamento do Modelo 2 (Árvore de Decisão) para classificar a 'maquina_mais_lenta_id' (gargalo).
+    - Avaliação (R² e Acurácia) e salvamento dos modelos em arquivos .joblib.
+
+3.  api_ia.py:
+    Uma API REST (Flask) que carrega os modelos .joblib e os expõe através do endpoint /predict.
+    Esta API é consumida pelo back-end Java do projeto principal.
+
+4.  modelos .joblib:
+    Os dois modelos pré-treinados, prontos para uso da API.
